@@ -1,31 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Madimi+One&display=swap');
 
-
-  *{
+* {
     margin: 0;
     padding: 0%;
     box-sizing: border-box;
     font-family: "Black Ops One", system-ui;
-  }
-  body{
+    transition: all 0.3s ease; 
+}
+
+body {
     background: #111;
     padding-bottom: 300px;
     overflow-x: hidden;
-  }
+}
 
-body:before{
+body:before {
     content: 'Progression';
     position: fixed;
     top: 50%;
-    Left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 5em;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 7em;
     font-weight: 500;
     color: transparent;
     -webkit-text-stroke: 1px whitesmoke;
 }
 
-section{
+section {
     position: relative;
     display: flex;
     justify-content: center;
@@ -33,43 +34,50 @@ section{
     min-height: 100vh;
 }
 
-section h2{
+section h2 {
     margin-left: 200px;
     font-size: 4em;
     color: #fff;
     margin-bottom: 20px;
 }
 
-section .container{
-position: relative;
-width: 1000px;
-display: flex;
-justify-content: space-between;
-align-items: center;
+.Heart-1 h2{ 
+font-family: "Bebas Neue", sans-serif;
+font-weight: 400;
+font-style: normal;   
 }
 
-section:nth-child(even) .container{
-flex-direction: row-reverse;
+section .container {
+    position: relative;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-section .container .HeartIMG{
-position: relative;
-width: 800px;
-height: 400px;
-overflow: hidden;
-box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+section:nth-child(even) .container {
+    flex-direction: row-reverse;
 }
 
-section .container .HeartIMG img{
+section .container .HeartIMG {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+}
+
+section .container .HeartIMG img {
     position: absolute;
     top: 0;
-    Left: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all 0.3s ease; 
 }
 
-section .container .content{
+section .container .content {
     position: absolute;
     right: 0;
     margin-top: 200px;
@@ -83,6 +91,179 @@ section .container .content{
     border-bottom: 6px solid whitesmoke;
 }
 
-section:nth-child(even) .container .content{
-  Left: 0;
+section:nth-child(even) .container .content {
+    left: 0;
 }
+
+section .container .content:hover {
+    background-color: #333; 
+    border-color: teal; 
+}
+
+/* This next section is for the animation */
+
+
+
+/* Style the Image Used to Trigger the Modal */
+.Heart-1 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* #Heart-2:hover {opacity: 0.7;} */
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 1000px;
+  }
+  
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+    /* The Close Button 2*/
+    .close2 {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      
+      .close2:hover,
+      .close2:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+ /* The Close Button */
+ .close4 {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close4:hover,
+.close4:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* The Close Button */
+.close5 {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close5:hover,
+.close5:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* The Close Button */
+.close6 {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close6:hover,
+.close6:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* The Close Button */
+.close7 {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close7:hover,
+.close7:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
